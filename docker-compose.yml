@@ -1,0 +1,45 @@
+version: "3"
+services:
+  php_wuzz:
+    build: ./php
+    image: php:latest
+    container_name: php_wuzz
+    hostname: "php"
+    volumes:
+      - ./src:/var/www/html
+      - ./php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+    working_dir: /var/www/html
+    depends_on:
+      - mysql_wuzz
+
+  mysql_wuzz:
+    image: mariadb:10.2
+    container_name: mysql_wuzz
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "33306:3306"
+    volumes:
+      - ./database/data:/var/lib/mysql
+      - ./database/conf.d:/etc/mysql/conf.d:ro
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: zaa10
+      MYSQL_ROOT_PASSWORD: 12345
+      TZ: Asia/Jakarta
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    read_only: false
+
+  nginx_wuzz:
+    build: ./nginx
+    image: nginx:latest
+    container_name: nginx_wuzz
+    hostname: "nginx"
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php_wuzz

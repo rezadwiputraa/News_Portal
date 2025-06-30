@@ -1,0 +1,85 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/auth.json
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+
+# Vendor & Node Modules
+/vendor/
+/node_modules/
+
+# Environment Variables
+/.env
+.env.backup
+.env.testing
+
+# Build/Cache Directories
+/bootstrap/cache/
+/storage/
+/public/hot
+/public/storage
+.phpunit.result.cache
+
+# IDE Specific Files (Common)
+.idea/             # PHPStorm/IntelliJ
+.vscode/           # VS Code
+.DS_Store          # macOS specific
+Thumbs.db          # Windows specific
+*.sublime-project
+*.sublime-workspace
+
+# Log Files
+*.log
+npm-debug.log
+yarn-error.log
+
+# Homestead Specific (if used)
+Homestead.json
+Homestead.yaml
+Vagrantfile.local
+
+# Database Files - CRITICAL TO IGNORE FOR MYSQL/MARIADB!
+# These are the files that caused your previous error.
+# They are typically found inside a 'data' sub-directory of your database path.
+# Adjust the 'database/data' path if your database files are stored elsewhere.
+# IMPORTANT: These files often contain live database data and logs.
+# Never commit them to Git.
+
+database/data/ibdata1
+database/data/ib_logfile0
+database/data/ib_logfile1
+database/data/mysql/
+database/data/*.frm
+database/data/*.ibd
+database/data/*.MYD
+database/data/*.MYI
+database/data/performance_schema/
+database/data/sys/
+database/data/tmp/
+database/data/undo*
+database/data/#*
+database/data/*.err
+database/data/*.log
+database/data/auto.cnf
+database/data/aria_log*
+database/data/multi_master.info
+database/data/binlog.*
+database/data/*.sdi

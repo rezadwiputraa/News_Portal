@@ -1,12 +1,12 @@
 <div align="center">
-  
-# MAGANG_WINNICODE
+
+# News_Portal
 
 ### *Empowering Innovation, Accelerating Impact, Unleashing Potential*
 
-![GitHub last commit](https://img.shields.io/github/last-commit/username/repositoryname)
-![GitHub top language](https://img.shields.io/github/languages/top/username/repositoryname)
-![GitHub language count](https://img.shields.io/github/languages/count/username/repositoryname)
+![GitHub last commit](https://img.shields.io/github/last-commit/rezadwiputraa/News_Portal)
+![GitHub top language](https://img.shields.io/github/languages/top/rezadwiputraa/News_Portal)
+![GitHub language count](https://img.shields.io/github/languages/count/rezadwiputraa/News_Portal)
 
 ---
 
